@@ -1,6 +1,7 @@
 {
   "name": "ventagregat",
   "version": "1.0.0",
+  "homepage": "https://ventagregat.ru",
   "description": "",
   "main": "index.js",
   "scripts": {
