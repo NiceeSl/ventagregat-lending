@@ -1,0 +1,101 @@
+/* ===== базовые настройки ===== */
+:root{
+  --bg:#fff;
+  --text:#0f0f0f;
+  --muted:#666;
+  --accent:#111;
+  --container:1200px;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:"Montserrat",system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ===== утилиты ===== */
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+.section{padding:72px 0}
+.section h2{
+  font-size:48px;line-height:1.15;margin:0 0 32px;font-weight:700;text-align:center
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  height:48px;padding:0 22px;border-radius:10px;background:var(--accent);
+  color:#fff;font-weight:700;border:0;cursor:pointer;transition:opacity .2s ease
+}
+.btn:hover{opacity:.9}
+.input{
+  height:48px;padding:0 14px;border-radius:10px;border:1px solid #e6e6e6;
+  width:100%;font:inherit;background:#fff
+}
+.grid{display:grid;gap:28px}
+@media (min-width:768px){
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ===== Header ===== */
+.site-header{
+  position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #eee
+}
+.site-header__inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}
+.brand__mark{
+  width:36px;height:36px;border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 30%, #111 36%, transparent 37%),
+    radial-gradient(circle at 70% 30%, #111 36%, transparent 37%),
+    radial-gradient(circle at 50% 75%, #111 36%, transparent 37%);
+}
+.nav{display:flex;gap:28px;align-items:center;font-weight:700}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;height:560px;color:#fff;display:grid;place-items:center;
+  background-image:
+    linear-gradient(0deg,rgba(0,0,0,.48),rgba(0,0,0,.48)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop");
+  background-size:cover;background-position:center
+}
+.hero__wrap{display:grid;gap:18px;max-width:920px}
+.hero__title{font-size:72px;line-height:1;font-weight:700;margin:0}
+.hero__text{display:grid;gap:14px;color:#eaeaea;font-size:18px}
+.hero__text ul{margin:6px 0 0 18px}
+
+/* ===== Products ===== */
+.product-card{
+  background:#fafafa;padding:22px;border-radius:18px;border:1px solid #eee;
+  display:grid;place-items:center
+}
+.product-card img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px
+}
+
+/* ===== Catalog ===== */
+.catalog__box{
+  border:1px dashed #d6d6d6;border-radius:14px;padding:18px;min-height:420px
+}
+
+/* ===== Contact ===== */
+.contact__title{
+  font-size:56px;line-height:1.1;margin:0 0 18px;font-weight:700
+}
+.contact__grid{display:grid;gap:20px}
+@media (min-width:920px){
+  .contact__grid{grid-template-columns:1fr 1fr;align-items:center}
+}
+
+/* ===== Office ===== */
+.office__title{
+  text-align:left;font-size:48px;line-height:1.15;margin:0 0 22px;font-weight:700
+}
+.office__info{display:grid;gap:10px;justify-content:end;align-content:start;text-align:right;font-size:18px}
+.office__map{width:100%;border-radius:14px;border:1px solid #eee;aspect-ratio:4/3;object-fit:cover}
+.brand img{display:block}
